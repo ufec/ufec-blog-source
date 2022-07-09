@@ -64,12 +64,12 @@
     "typescript": "^4.7.4"
   },
   "repository": {
-    "url": "https://github.com/ufec/gatsby-theme-xue",
+    "url": "https://github.com/ufec/ufec-blog-source",
     "type": "git"
   },
-  "homepage": "https://github.com/ufec/gatsby-theme-xue#readme",
+  "homepage": "https://github.com/ufec/ufec-blog-source#readme",
   "bugs": {
-    "url": "https://github.com/ufec/gatsby-theme-xue/issues"
+    "url": "https://github.com/ufec/ufec-blog-source/issues"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,css}": "prettier --write --ignore-unknown",
