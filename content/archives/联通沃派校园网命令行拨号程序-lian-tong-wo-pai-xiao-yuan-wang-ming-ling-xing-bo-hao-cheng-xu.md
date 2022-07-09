@@ -1,0 +1,76 @@
+---
+title: 联通沃派校园网命令行拨号程序
+date: 2021-10-24 22:31:42.0
+updated: 2021-10-24 22:38:49.0
+url: https://www.ufec.cn/archives/lian-tong-wo-pai-xiao-yuan-wang-ming-ling-xing-bo-hao-cheng-xu.html
+featuredImage:
+categories:
+  - 代码
+  - 日常
+tags:
+  - 沃派
+---
+
+# 联通沃派校园网
+
+## 前言
+
+这两天抽了点时间用 `Go` 写了个沃派拨号工具，为什么要写这个工具？
+
+为了解决联通沃派的以下痛点：
+
+- 用工具拨号联网，不让电脑分享 WiFi
+  - 我自己花钱开的账号，结果不让我分享，还得要手机单开一个客户端，我不能理解！再者说，有谁的电脑会一周甚至一个月不断电分享 WiFi？不就是想着平时用用，省的手机还得去单独连，网卡的要死！！！
+- 用网线上网时，如果不小心碰掉了网线，就会被迫下线，必须要重新拨号
+  - 想想看，你打着游戏不小心碰掉了，必须要切出游戏重新拨号，这得多浪费时间。。。。
+
+## 实现的功能
+
+- 简单的命令行程序，只需要传入账号密码参数即可实现拨号上网
+- 绕过无法分享 wifi，使用程序登陆后，可以直接分享热点给手机用，windows 分享 5G 频段的教程网上有，这里就不赘述了
+- 网线上网时，即使拔掉网线，亲测一两分钟内插上去会自动连接，不用重新拨号，不过 wifi 好像不行，应该不会有人连着 wifi 打游戏吧？？
+- 不易掉线，相比沃派拨号客户端来说，更稳定
+
+## 遇到的坑
+
+编译到路由器 `mips` 中运行，折腾了好久，这 Windows 编译的死活不行，最后只能掏出`wsl`编译，这里遇到的问题知乎上有解
+
+这里因为 MT7621 没有 fpu 也就是浮点处理器，所以指定使用软浮点，这样 go 会通过其他指令来模拟浮点运算，编译出来的程序里面不会包含浮点计算指令，否则调用不存在的 fpu 会出现 Illegal instruction
+
+```bash
+ GOOS=linux GOARCH=mipsle GOMIPS=softfloat CGO_ENABLED=0 go build
+```
+
+> 早期版本的 go 需要借助第三方库才可以实现 mips 平台的交叉编译，但 1.11 版本的 go 已经内置了 mips 平台的支持，所以不需要第三方库
+>
+> 对 MT7621 无 FPU 的另外一个处理办法是在编译 openwrt 时打开内核的浮点模拟器，这样不需要指定 GOMIPS=softfloat 编译出来的程序也可以运行。不过我觉得既然都是模拟，在内核模拟跟在这里模拟也差不多，所以对无 FPU 的处理器，直接指定 GOMIPS=softfloat 即可
+
+[Go 语言交叉编译在 openwrt 上运行的程序](https://zhuanlan.zhihu.com/p/57163950)
+
+[解决 GO 语言编译程序在 openwrt(mipsle 架构)上运行提示 Illegal instruction 问题](https://blog.csdn.net/qq531456898/article/details/80095707)
+
+[[golang binary not running on mips](https://stackoverflow.com/questions/55154143/golang-binary-not-running-on-mips)](https://stackoverflow.com/questions/55154143/golang-binary-not-running-on-mips)
+
+## 效果图
+
+Windows 端
+
+![wenet_windows_success](https://my-static.ufec.cn/blog/b6530a6e8c2e6176853b9c4fb6600b6b.png)
+
+另外编译了一个路由器版本，但即使开了 `ssh` 支持，也有很多不完善的地方，默认的 ssh 用户目录是只读的，本程序需要写配置文件，这就无法实现了，待刷 `OP` 之后测试一波，写在 `/tmp` 目录可能会重启丢失
+
+但我的 `cr6608` 这个默认是带了 `crontab` 的，其实也可以做，只需要重启执行上线命令即可，定时发 ping，即可一直保持登录
+
+![cr6608_router_hello](https://my-static.ufec.cn/blog/6c9697168b87dcf6e426904d1358c355.png)
+
+![cr6608_router](https://my-static.ufec.cn/blog/857fa8e318a3a67a5864483823057e9b.png)
+
+执行上线命令后
+
+![cr6608_success](https://my-static.ufec.cn/blog/f7f3ea2bd3456d90c6fad82c880854b9.png)
+
+到时候刷了 `OP` 在测试，目前 Windows 是木有问题的！
+
+## 写在最后
+
+抵制不良软件，上网自由

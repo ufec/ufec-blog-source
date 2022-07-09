@@ -1,0 +1,37 @@
+博客:
+  - title: Geek Era
+    description: 心之所向，即所向披靡
+    url: https://www.geekera.cn
+    avatar: https://www.geekera.cn/avatar
+    weight: 0
+  - title: 苏晓晴博客
+    description: 一个温馨的技术博客
+    url: https://www.toubiec.cn
+    avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=3074193836&spec=100
+    weight: 0
+  - title: WAY's Blog
+    description: 我亦无他，惟手熟尔。
+    url: https://www.wayok.cn
+    avatar: https://www.wayok.cn/avatar
+    weight: 0
+  - title: 凡蜕博客
+    description: 心之所向，即所向披靡
+    url: https://blog.ysboke.cn
+    avatar: https://cdn.jsdelivr.net/gh/xzzai/static@master/uPic/default-bg.jpg
+    weight: 0
+  - title: pei你看雪
+    description:
+    url: https://phy0412.top
+    avatar:
+    weight: 0
+我的:
+  - title: 淘宝优惠券
+    description: 淘宝全网优惠券，低价购物
+    url: http://tao.ufec.cn
+    avatar:
+    weight: 1
+  - title: Ufec云盘
+    description: 基于OneDrive的在线云盘
+    url: https://pan.ufec.cn
+    avatar:
+    weight: 2

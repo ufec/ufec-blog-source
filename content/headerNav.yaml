@@ -1,0 +1,11 @@
+items:
+  - title: 首页
+    to: /
+  - title: 归档
+    to: /archives
+  - title: 相册
+    to: /photos
+  - title: 日志
+    to: /journals
+  - title: 友链
+    to: /links

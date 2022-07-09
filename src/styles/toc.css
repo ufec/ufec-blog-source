@@ -1,0 +1,25 @@
+.toc {
+  position: fixed;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: 0.9rem;
+}
+
+.toc-right-fixed {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0);
+}
+
+.toc > ul > li .active {
+  color: red;
+}
+
+/* 二级目录 */
+.toc > ul > li > ul {
+  margin-left: 1rem;
+}
+/* 三级目录 */
+.toc > ul > li > ul > li > ul {
+  margin-left: 1.2rem;
+}

@@ -1,0 +1,7 @@
+.md-content p code {
+  color: #333;
+  padding: 0.3em;
+  border-radius: 5px;
+  background: #f3f4f4;
+  word-break: break-word;
+}

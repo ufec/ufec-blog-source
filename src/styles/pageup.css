@@ -1,0 +1,16 @@
+.entry-navigation .nav:before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  z-index: 1;
+}
+
+.entry-navigation .nav:hover:before {
+  opacity: 0.5;
+}

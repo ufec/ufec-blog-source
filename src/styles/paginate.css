@@ -1,0 +1,19 @@
+.pagination-circle {
+  display: inline-flex;
+  margin: 0 2px;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  line-height: 2.4rem;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+}
+
+.pagination-circle.is-current,
+.pagination-circle:hover {
+  background-color: #f1404b;
+  background-image: none;
+  color: #fff;
+}

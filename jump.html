@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go To</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let queryString = location.search;
+    let arr = new Array();
+    if (queryString.indexOf("?") != -1) {
+        let httpQury = queryString.substr(1);
+        let strs = httpQury.split("&");
+        let param = new Array();
+        for (let i = 0; i < strs.length; i++) {
+            let temp = strs[i].split("=");
+            arr[temp[0]] = temp[1];
+        }
+    }
+    let url = arr['url'] ? arr['url'] : "";
+    if (url) {
+        window.location.href = url;
+    }else{
+        window.location.href = "https://www.ufec.cn";
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+.links-item {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s,
+    transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 900;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5,
+h6 {
+  font-size: 14px;
+}
