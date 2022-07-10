@@ -137,7 +137,7 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
   }, [allTitle]);
 
   return (
-    <Layout location={location}>
+    <Layout location={location} seoProps={{ title: frontmatter.title, description: data.markdownRemark.excerpt, author: frontmatter.author?.length > 0 ? frontmatter.author[0] : undefined}}>
       <SiteInfoProvider.Consumer>
         {(siteInfo) => (
           <div className="mx-auto" id="container">

@@ -22,7 +22,7 @@ const SEO = ({ lang, title, description, author }: SEOProps) => {
           <meta property="og:description" content={description} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:creator" content={author} />
+          <meta name="twitter:creator" content={author ? author : data.site.siteMetadata.owner} />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
         </Helmet>
