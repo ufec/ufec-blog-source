@@ -97,6 +97,19 @@ export const createPages: GatsbyNode["createPages"] = async ({
   // 创建博文页面 包括首页和首页分页(因为首页主要展示的是博文，不包含日志或其它内容)
   {
     const indexTemplate = resolve(__dirname, "src/templates/index.tsx");
+    const postPerPage = 9; // 首页每页显示的博文数
+    const numPostPages = Math.ceil(blogNodes.length / postPerPage); // 首页总页数
+    // 构造首页分页
+    for (let i = 1; i <= numPostPages; i++) {
+      createPage({
+        path: i === 1 ? "/" : `/page/${i}`,
+        component: indexTemplate,
+        context: {
+          limit: postPerPage,
+          skip: (i - 1) * postPerPage,
+        },
+      });
+    }
     const postTemplate = resolve(__dirname, "src/templates/post.tsx"); // 文章模板
     // 获取所有的博文
     const queryAllPostData = await graphql<AllPostData, string>(`
@@ -132,9 +145,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
     if (queryAllPostData.errors || !queryAllPostData.data) {
       throw Error(queryAllPostData.errors);
     }
-    const postPerPage = 9; // 首页每页显示的博文数
-    const numPostPages = Math.ceil(blogNodes.length / postPerPage); // 首页总页数
-
     // 遍历所有文章
     queryAllPostData.data.allMarkdownRemark.edges.forEach((edge) => {
       // 为每篇博文创建一个页面并构造context上下文
@@ -150,17 +160,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
       });
       reporter.success(`create page for ${edge.node.frontmatter.title} slug: ${edge.node.fields.slug}`);
     });
-    // 构造首页分页
-    for (let i = 1; i <= numPostPages; i++) {
-      createPage({
-        path: i === 1 ? "/" : `/page/${i}`,
-        component: indexTemplate,
-        context: {
-          limit: postPerPage,
-          skip: (i - 1) * postPerPage,
-        },
-      });
-    }
   }
 
   // 创建标签页面
