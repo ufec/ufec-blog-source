@@ -161,7 +161,7 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
                 <hr className="bg-gray-100 dark:bg-gray-700 "></hr>
                 <p className="flex flex-row justify-start flex-wrap">
                   {frontmatter?.tags?.map((tag) => {
-                    return <Tag key={tag} tagName={tag} tagUrl={`${tag}`}></Tag>;
+                    return <Tag key={tag} tagName={tag} tagUrl={`/tags/${tag}`}></Tag>;
                   })}
                 </p>
                 <hr className="bg-gray-100 dark:bg-gray-700 "></hr>
