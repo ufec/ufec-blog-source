@@ -174,6 +174,18 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.tableOfContents }}
               ></aside>
             </article>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963978385376550"crossOrigin="anonymous"></script>
+            <ins className="adsbygoogle"
+                style={{display:"block", textAlign:"center",}}
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-2963978385376550"
+                data-ad-slot="8158849947"
+            >
+            </ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             <PageUp prev={fields?.prev} next={fields?.next}></PageUp>
           </div>
         )}
