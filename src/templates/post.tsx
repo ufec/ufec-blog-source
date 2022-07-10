@@ -32,7 +32,6 @@ interface Authors {
 
 const PostTemplate = ({ data, location }: PostTemplateProps) => {
   const { frontmatter, fields } = data.markdownRemark;
-  console.log(fields);
   const [showToc, setShowToc] = useState(false);
   const [fixedToc, setFixedToc] = useState(false);
   const [allTitle, setAllTitle] = useState<NodeListOf<HTMLHeadingElement>>();

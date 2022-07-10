@@ -54,7 +54,7 @@ const sortArchivesGroupData = (
 // 为 blogNodes 中的每个节点生成兄弟节点 以达到翻页的目的
 // 实现思路：先将所有文章按发布时间倒序排序，遍历每个节点取前一个和后一个分别为上一篇和下一篇
 const buildSiblingNodes = ({ createNodeField }: Actions) => {
-  blogNodes.sort((a, b) => a.fields.createdAt - b.fields.createdAt); // 先排序
+  blogNodes.sort((a, b) => b.fields.createdAt - a.fields.createdAt); // 先排序
   for (let i = 0; i < blogNodes.length; i++) {
     const node = blogNodes[i];
     // 第一个没有上一个
