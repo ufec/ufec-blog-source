@@ -3,7 +3,7 @@ title: 安装WSL(Windows Linux)
 date: 2020-04-18 09:09:09.0
 updated: 2020-05-24 14:44:28.0
 url: https://www.ufec.cn/archives/5.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/2020/05/wsl-285f5aa5262f4102ba3a09b43a576705.webp
 categories:
   - 日常
 tags:
@@ -13,13 +13,13 @@ tags:
 ## 开始安装
 
 在自带的 MicrosoftStore 搜索 Linux，选择自己想要的系统，
-![store.png](https://www.ufec.cn/upload/2020/04/store-4ab3534639f6460097c319ceea157bcc.png)
+![store.webp](https://my-static.ufec.cn/blog/2020/04/store-4ab3534639f6460097c319ceea157bcc.webp)
 这里我选的 Ubuntu，直接搜 Ubuntu 也可，安装完成后启动，如果有如下提示
-![install.png](https://www.ufec.cn/upload/2020/04/install-3bb67cc367fe443c945f3e350aaa3a45.png)
+![install.webp](https://my-static.ufec.cn/blog/2020/04/install-3bb67cc367fe443c945f3e350aaa3a45.webp)
 当然也可能报错，无法启动。那就可能是没开启 WindowsLinux 子系统支持，打开程序和功能->启用或关闭 Windows 功能，找到适用于 Linux 的 Windows 子系统，勾选确定等待配置，重启，即可打开
 
 切换 root 用户
-![root.png](https://www.ufec.cn/upload/2020/04/root-41a9765651cc42cfbfc22a718e9ccda2.png)
+![root.webp](https://my-static.ufec.cn/blog/2020/04/root-41a9765651cc42cfbfc22a718e9ccda2.webp)
 
 ## 一些要点
 
@@ -95,4 +95,4 @@ gnome-terminal &
 ```
 
 安装图形化界面 gnome(这个很简洁)，追求美观可以去找别的，界面如下
-![gui.png](https://www.ufec.cn/upload/2020/04/gui-d695dd390efd41ce988e1422b6575279.png)
+![gui.webp](https://my-static.ufec.cn/blog/2020/04/gui-d695dd390efd41ce988e1422b6575279.webp)

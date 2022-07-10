@@ -3,7 +3,7 @@ title: C语言数据结构-稀疏多项式运算
 date: 2021-05-08 10:28:41.0
 updated: 2021-05-08 14:20:58.0
 url: https://www.ufec.cn/archives/data-structure-for-c-sparsepolyno.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/382d7dfefd163f0d4d45c0e434974d22.png
 categories:
   - 数据结构
 tags:

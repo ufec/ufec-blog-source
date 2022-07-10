@@ -3,7 +3,7 @@ title: Python批量提取多目录下多个word文档中的图片
 date: 2020-03-27 17:35:25.0
 updated: 2020-09-27 20:34:30.0
 url: https://www.ufec.cn/archives/3.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/2020/05/python-891182b1a87d4053897dca586b9ac9bb.webp
 categories:
   - 代码
 tags:
@@ -67,11 +67,11 @@ pipenv shell
 ## 使用演示
 
 原来的目录
-![1.png](https://www.ufec.cn/upload/2020/03/1-869493ca7a354bf18262b438aefd10c5.png)
+![1.webp](https://my-static.ufec.cn/blog/2020/03/1-869493ca7a354bf18262b438aefd10c5.webp)
 单线程操作
-![2.png](https://www.ufec.cn/upload/2020/03/2-3cac43d8a4b942de98524be74413b3f9.png)
+![2.webp](https://my-static.ufec.cn/blog/2020/03/2-3cac43d8a4b942de98524be74413b3f9.webp)
 多线程操作
-![1.png](https://www.ufec.cn/upload/2020/03/1-085f28efc34f49419cceb477466cd5b9.png)
+![1.webp](https://my-static.ufec.cn/blog/2020/03/1-085f28efc34f49419cceb477466cd5b9.webp)
 
 ## 写在结尾
 

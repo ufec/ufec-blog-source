@@ -3,7 +3,7 @@ title: TikTok加密中的套娃模式
 date: 2020-06-28 10:48:47.0
 updated: 2020-09-27 21:55:20.0
 url: https://www.ufec.cn/archives/tiktok-signature.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/091efef0c2d7bc9ad9b66d83399cb0f7.jpg
 categories:
   - 代码
   - 调试

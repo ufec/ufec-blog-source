@@ -3,7 +3,7 @@ title: 飞Young逆向分析-第二章
 date: 2021-10-04 08:36:20.0
 updated: 2021-10-04 08:36:20.0
 url: https://www.ufec.cn/archives/fyoung-reverse-second-part.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/5cbc7afdc3fd99feefbb44e3734fcccc.png
 categories:
   - 代码
   - 日常

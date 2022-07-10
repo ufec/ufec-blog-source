@@ -3,7 +3,7 @@ title: 新浪短网址接口源码，并使用PHP模拟登陆来自动更新
 date: 2020-05-17 09:55:54.0
 updated: 2020-09-27 21:55:23.0
 url: https://www.ufec.cn/archives/php-weibo-login.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/2020/05/timg-c31ed44661e942cba0b35f1770034c06.webp
 categories:
   - 代码
 tags:

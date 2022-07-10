@@ -3,7 +3,7 @@ title: AndroidStudio反编译调试实战
 date: 2020-10-28 21:03:45.0
 updated: 2020-10-28 21:03:46.0
 url: https://www.ufec.cn/archives/androidstudiodebug.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/55d8c8954ec2cbec65d4e25a5da63395.png
 categories:
   - 调试
 tags:

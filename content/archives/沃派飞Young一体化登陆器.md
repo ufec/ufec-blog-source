@@ -3,7 +3,7 @@ title: 沃派飞Young一体化登陆器
 date: 2021-10-30 23:38:31.0
 updated: 2021-10-30 23:38:31.0
 url: https://www.ufec.cn/archives/wo-pai-fei-young-yi-ti-hua-deng-lu-qi.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/8885de4772b45721003402ea5aca50f2.png
 categories:
   - 代码
   - 日常

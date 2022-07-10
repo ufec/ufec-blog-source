@@ -3,7 +3,7 @@ title: MatLab2020破解安装
 date: 2020-09-29 22:06:43.0
 updated: 2020-10-17 10:16:00.0
 url: https://www.ufec.cn/archives/matlab.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/f2c2f8064a8b88de893fe2c671b68e1c.jpg
 categories:
   - 日常
 tags:

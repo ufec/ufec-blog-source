@@ -3,7 +3,7 @@ title: javascript手写操作符
 date: 2021-09-17 13:23:28.0
 updated: 2021-09-17 13:28:46.0
 url: https://www.ufec.cn/archives/javascript-realize-operator.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/89619860743c6c21914116bc9d8dd378.png
 categories:
   - 代码
   - 日常

@@ -3,7 +3,7 @@ title: NodeJS为GBlog-wx小程序增加推送功能
 date: 2020-06-08 21:27:09.0
 updated: 2020-06-13 14:07:46.0
 url: https://www.ufec.cn/archives/gblog-wx-push.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/2020/06/node-7c8d68439142414f8eb175e9b0c3183c.webp
 categories:
   - 代码
 tags:

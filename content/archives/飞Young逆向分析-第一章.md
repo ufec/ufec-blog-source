@@ -3,7 +3,7 @@ title: 飞Young逆向分析-第一章
 date: 2021-10-02 22:20:37.0
 updated: 2021-10-02 22:23:31.0
 url: https://www.ufec.cn/archives/fyoung-reverse-first-part.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/55d8c8954ec2cbec65d4e25a5da63395.png
 categories:
   - 日常
   - 调试

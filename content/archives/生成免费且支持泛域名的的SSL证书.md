@@ -3,7 +3,7 @@ title: 生成免费且支持泛域名的的SSL证书
 date: 2020-06-23 15:33:08.0
 updated: 2020-06-24 18:25:31.0
 url: https://www.ufec.cn/archives/acme-free-ssl.html
-featuredImage:
+thumbnail: https://my-static.ufec.cn/blog/6276462b84dbf1a17105d26bac1e7e53.png
 categories:
   - 日常
 tags:
