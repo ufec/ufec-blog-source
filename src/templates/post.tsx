@@ -37,7 +37,6 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
   const [allTitle, setAllTitle] = useState<NodeListOf<HTMLHeadingElement>>();
   const [headerImage, setHeaderImage] = useState<PostHeaderImage>();
   const authors: Authors = AuthorsFile;
-  let adsbygoogle = null;
   // 点击目录、标题锚点时，固定目录
   const linkToHeader = (anchor: HTMLAnchorElement) => {
     anchor.onclick = () => {
@@ -122,8 +121,13 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
     googleADScript.async = true;
     googleADScript.crossOrigin = "anonymous";
     document.body.appendChild(googleADScript);
-    adsbygoogle = window?.adsbygoogle || [];
-    adsbygoogle.push({});
+    // 不确定上述脚本何时加载完毕，所以延迟执行
+    const IntervalId = setInterval(() => {
+      if (window.adsbygoogle) {
+        window.adsbygoogle.push({});
+        clearInterval(IntervalId);
+      }
+    }, 1000);
     allTitle?.forEach((headingElement: HTMLHeadingElement) => {
       // io.observe(headingElement);
       // console.log(headingElement);
