@@ -123,10 +123,7 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
     googleADScript.crossOrigin = "anonymous";
     document.body.appendChild(googleADScript);
     adsbygoogle = window?.adsbygoogle || [];
-    adsbygoogle.push({
-      google_ad_client: "ca-pub-2963978385376550",
-      enable_page_level_ads: true,
-    });
+    adsbygoogle.push({});
     allTitle?.forEach((headingElement: HTMLHeadingElement) => {
       // io.observe(headingElement);
       // console.log(headingElement);
