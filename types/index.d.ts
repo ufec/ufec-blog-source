@@ -17,6 +17,10 @@ declare module "*.svg" {
   const value: any;
   export default value;
 }
+
+declare interface Window {
+  adsbygoogle: any;
+}
 // gitalk declare module
 // declare module "gatsby-plugin-gitalk" {
 //   interface GitalkOptionsProps {

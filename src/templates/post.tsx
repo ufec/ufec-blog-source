@@ -37,7 +37,7 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
   const [allTitle, setAllTitle] = useState<NodeListOf<HTMLHeadingElement>>();
   const [headerImage, setHeaderImage] = useState<PostHeaderImage>();
   const authors: Authors = AuthorsFile;
-
+  let adsbygoogle = null;
   // 点击目录、标题锚点时，固定目录
   const linkToHeader = (anchor: HTMLAnchorElement) => {
     anchor.onclick = () => {
@@ -117,7 +117,16 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
       }
     }
     isShowToc();
-
+    const googleADScript = document.createElement("script");
+    googleADScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963978385376550";
+    googleADScript.async = true;
+    googleADScript.crossOrigin = "anonymous";
+    document.body.appendChild(googleADScript);
+    adsbygoogle = window?.adsbygoogle || [];
+    adsbygoogle.push({
+      google_ad_client: "ca-pub-2963978385376550",
+      enable_page_level_ads: true,
+    });
     allTitle?.forEach((headingElement: HTMLHeadingElement) => {
       // io.observe(headingElement);
       // console.log(headingElement);
@@ -174,18 +183,14 @@ const PostTemplate = ({ data, location }: PostTemplateProps) => {
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.tableOfContents }}
               ></aside>
             </article>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963978385376550"crossOrigin="anonymous"></script>
             <ins className="adsbygoogle"
-                style={{display:"block", textAlign:"center",}}
+                style={{display:"block", textAlign:"center"}}
                 data-ad-layout="in-article"
                 data-ad-format="fluid"
                 data-ad-client="ca-pub-2963978385376550"
                 data-ad-slot="8158849947"
-            >
+            >      
             </ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
             <PageUp prev={fields?.prev} next={fields?.next}></PageUp>
           </div>
         )}
