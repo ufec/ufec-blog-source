@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     owner: "ufec",
     title: "Code Life",
-    siteUrl: "https://ufec.github.io",
+    siteUrl: "https://www.ufec.cn",
     description: "The show must go on",
   },
   plugins: [
@@ -152,6 +152,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: "/",
+        createLinkInHead: true,
       },
     },
     // 无sourcemap
