@@ -84,19 +84,10 @@ const Footer = () => {
               title="又拍云"
             >
               <img
-                src="https://www.ufec.cn/upload/2020/04/youpai-1b2eb4eb7b744730a41057a221ef5499.png"
+                src="https://my-static.ufec.cn/blog/2020/04/youpai-1b2eb4eb7b744730a41057a221ef5499.webp"
                 alt="又拍云"
                 width="48"
               />
-            </a>
-          </p>
-          <p className="leading-6">
-            <a
-              href="http://beian.miit.gov.cn"
-              target="_blank"
-              className="text-base text-gray-800 dark:text-gray-500"
-            >
-              鄂ICP备20003604号-1
             </a>
           </p>
           <div className="badges">
