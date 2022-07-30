@@ -3,7 +3,7 @@ title: MatLab2020破解安装
 date: 2020-09-29 22:06:43.0
 updated: 2020-10-17 10:16:00.0
 url: https://www.ufec.cn/archives/matlab.html
-thumbnail: https://my-static.ufec.cn/blog/f2c2f8064a8b88de893fe2c671b68e1c.jpg
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/f2c2f8064a8b88de893fe2c671b68e1c.webp
 categories:
   - 日常
 tags:
@@ -36,14 +36,14 @@ tags:
 - <font color="red">安装路径建议修改，不要放在 C 盘，选择空闲的 SSD 盘，大概需要 32G</font>，等待安装完成(过程中不要联网)
 - 上述过程如果选择使用 Matlab 服务器输入文件安装秘钥，密钥：`40236-45817-26714-51426-39281`，则密钥文件选择`license_server.lic`
 
-![](https://my-static.ufec.cn/blog/0de1d417fa728f3f540fccab79fc01bd.jpg)
+![](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/0de1d417fa728f3f540fccab79fc01bd.webp)
 
 ### 视频教程
 
 #### 视频教程基于自建云盘下载的安装包
 
-<video id="video" controls="" preload="none" poster="https://my-static.ufec.cn/blog/0de1d417fa728f3f540fccab79fc01bd.jpg">
-      <source id="mp4" src="https://my-static.ufec.cn/blog/MATLAB.mp4" type="video/mp4">
+<video id="video" controls="" preload="none" poster="https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/0de1d417fa728f3f540fccab79fc01bd.webp">
+      <source id="mp4" src="https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/MATLAB.mp4" type="video/mp4">
 </video>
 ### 安装完成
 
@@ -53,12 +53,12 @@ tags:
 
 ### 演示效果
 
-![Polyspace R2020b](https://my-static.ufec.cn/blog/644e86dfb2576ebc252cbbb5aa9c118e.jpg)
+![Polyspace R2020b](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/644e86dfb2576ebc252cbbb5aa9c118e.webp)
 
 试用一下小功能
 
-![test](https://my-static.ufec.cn/blog/9ca1c5b348cff575bb9fd15277f325c5.png)
+![test](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/9ca1c5b348cff575bb9fd15277f325c5.webp)
 
 看看版本
 
-![ver](https://my-static.ufec.cn/blog/39c880a3ae7798972f4876293fad2e43.jpg)
+![ver](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/39c880a3ae7798972f4876293fad2e43.webp)

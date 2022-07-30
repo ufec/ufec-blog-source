@@ -3,7 +3,7 @@ title: 飞Young逆向分析-第二章
 date: 2021-10-04 08:36:20.0
 updated: 2021-10-04 08:36:20.0
 url: https://www.ufec.cn/archives/fyoung-reverse-second-part.html
-thumbnail: https://my-static.ufec.cn/blog/5cbc7afdc3fd99feefbb44e3734fcccc.png
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/5cbc7afdc3fd99feefbb44e3734fcccc.webp
 categories:
   - 代码
   - 日常
@@ -62,7 +62,7 @@ tags:
 
 至此我们已经解决了认证接口中所有的参数，放到 `Postman` 中请求也是轻松拿下
 
-![fyoung_login_success](https://my-static.ufec.cn/blog/27795ce2faedd1778193cf8610fc3678.png)
+![fyoung_login_success](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/27795ce2faedd1778193cf8610fc3678.webp)
 
 ## 后续
 
@@ -70,4 +70,4 @@ tags:
 
 > 声明：为了绕过阿里云盘无法分享压缩文件，我将后缀改为了 png，下载后删掉即可
 
-![qrcode_for_gh_b645da873ba5_258](https://my-static.ufec.cn/blog/ed6f784e00f27f9180fc7fba474a06aa.jpg)
+![qrcode_for_gh_b645da873ba5_258](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/ed6f784e00f27f9180fc7fba474a06aa.webp)

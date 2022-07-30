@@ -3,7 +3,7 @@ title: 生成免费且支持泛域名的的SSL证书
 date: 2020-06-23 15:33:08.0
 updated: 2020-06-24 18:25:31.0
 url: https://www.ufec.cn/archives/acme-free-ssl.html
-thumbnail: https://my-static.ufec.cn/blog/6276462b84dbf1a17105d26bac1e7e53.png
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/6276462b84dbf1a17105d26bac1e7e53.webp
 categories:
   - 日常
 tags:
@@ -70,7 +70,7 @@ acme.sh   --issue   --dns dns_dp   -d aa.com  -d *.aa.com
 这一步的过程就类似于在站长平台提交网站时，要验证域名所有者，推荐使用 API 的方式来部署，简单快捷
 
 这里以本站域名作为示范
-![111.jpg](https://my-static.ufec.cn/blog/e152c5912e7b4007d567648fa63b2997.jpg)
+![111.webp](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/e152c5912e7b4007d567648fa63b2997.webp)
 这样的话基本就可以
 
 ## 安装证书
@@ -113,7 +113,7 @@ acme.sh --install-cert -d yourdomain.com -d www.yourdomain.com \
 ```
 
 宝塔效果
-![444.jpg](https://my-static.ufec.cn/blog/c36f6f7437469c7a03ad456129664bbb.jpg)
+![444.webp](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/c36f6f7437469c7a03ad456129664bbb.webp)
 
 ## 更新证书
 

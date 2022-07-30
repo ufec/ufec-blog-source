@@ -3,7 +3,7 @@ title: 飞Young逆向分析-第一章
 date: 2021-10-02 22:20:37.0
 updated: 2021-10-02 22:23:31.0
 url: https://www.ufec.cn/archives/fyoung-reverse-first-part.html
-thumbnail: https://my-static.ufec.cn/blog/55d8c8954ec2cbec65d4e25a5da63395.png
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/55d8c8954ec2cbec65d4e25a5da63395.webp
 categories:
   - 日常
   - 调试
@@ -41,11 +41,11 @@ tags:
 
 最后从 `渗透旁站` 的思想，想到 从飞 Young 历史版本找些蛛丝马迹，果不其然找到一个可用的版本，借助博哥的 `MT`会员强力加持成功脱壳，心想着这不就跟沃派一样了，分分钟拿下。`jadx` 直接开干，静态分析顺着调用栈在一处关键处，`jadx`无法还原代码
 
-![jadx error](https://my-static.ufec.cn/blog/dc9ec7ac14e4effb15e1fe09b06e8bb5.png)
+![jadx error](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/dc9ec7ac14e4effb15e1fe09b06e8bb5.webp)
 
 只能想着动态调试一通操作后，调试控制台显示 `Variables debug info not available`
 
-![debug-Variables debug info not available](https://my-static.ufec.cn/blog/76c18353da54e5f8dd1daf49feebfa1e.png)
+![debug-Variables debug info not available](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/76c18353da54e5f8dd1daf49feebfa1e.webp)
 
 这尼玛不让看局部变量我怎么调试，我还是准备断点跟，越跟越迷糊，根本摸不清方向，花了贼长时间一直没有思绪，又在网上看到 [Akkuman 大佬的文章](http://hacktech.cn/2019/05/21/re-hubei-feiyoung-pc-version/) ，感谢 Akkuman 不吝赐教，给出了好用的工具，节省了不少时间，但还是感觉很多地方需要知道变量值，这样才能验证是否正确，又去看了看 `smail` 语法，准备构造变量，断出有价值的值，这个地方也花了点时间，一直打包不成功，打包成功也运行不起来！！！在不断乱撞墙角后，我决定删了所有的东西，捋清思路重新来过
 
@@ -53,7 +53,7 @@ tags:
 
 明确起点，抓包看参数，主要的登陆参数出现在 `b.a.a.a.b.c.c()` 这个方法中
 
-![fei_young_all_param](https://my-static.ufec.cn/blog/82551ebac7c99733b34b360bcd1566e2.png)
+![fei_young_all_param](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/82551ebac7c99733b34b360bcd1566e2.webp)
 
 反向去跟，定位到 `b.a.a.a.e.g.b()` 函数，里面便是所有参数的生成过程了，这里时看到了日志文件和参数都是 AES 加密，就想着先分析日志加密过程。
 
@@ -76,7 +76,7 @@ b.a.a.a.c.c.a();
 
 有几个奇怪的地方，他先是对`key`进行了像是 md5 但又不是的 hash 操作，然后对加密内容进行了一次函数处理，导致你不能直接解密，必须推导出函数处理，先第一次解密，这就意味着你必须会而且要读懂还能反向写出，这就有点儿为难人了，先搞定加密吧！上下求索最终还是成功还原了，这里看前缀就知道还原了，大部分日志都会有个时间分隔
 
-![AES_encrypt](https://my-static.ufec.cn/blog/3494d3818dd43bc30e4d02b844dbc611.png)
+![AES_encrypt](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/3494d3818dd43bc30e4d02b844dbc611.webp)
 
 然后就是密码了，一样的分析出飞 young 密码流程
 
@@ -91,11 +91,11 @@ b.a.a.a.f.q.c(md5(res));// 这里对md5后的值又自己实现了一层处理�
 
 ```
 
-![encrypt_password](https://my-static.ufec.cn/blog/00481e8bf1335e60ca244675a0f1c8b3.png)
+![encrypt_password](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/00481e8bf1335e60ca244675a0f1c8b3.webp)
 
 这里可以看到跟抓包结果一致
 
-![抓包_密码加密结果](https://my-static.ufec.cn/blog/bed01cda6158f0f8de48e73e6b8b073d.jpg)
+![抓包_密码加密结果](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/bed01cda6158f0f8de48e73e6b8b073d.webp)
 
 ## 未完待续！！！
 

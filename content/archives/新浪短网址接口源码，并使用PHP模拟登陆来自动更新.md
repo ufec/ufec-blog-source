@@ -3,7 +3,7 @@ title: 新浪短网址接口源码，并使用PHP模拟登陆来自动更新
 date: 2020-05-17 09:55:54.0
 updated: 2020-09-27 21:55:23.0
 url: https://www.ufec.cn/archives/php-weibo-login.html
-thumbnail: https://my-static.ufec.cn/blog/2020/05/timg-c31ed44661e942cba0b35f1770034c06.webp
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/2020/05/timg-c31ed44661e942cba0b35f1770034c06.webp
 categories:
   - 代码
 tags:
@@ -87,5 +87,5 @@ https://passport.weibo.com/wbsso/login
 ```
 
 即可获取登陆 cookie，虽然我还没写出 php 的加密过程，但我相信肯定能用 PHP 来写，毕竟服务端用的 PHP 解密
-![login.png](https://www.ufec.cn/upload/2020/05/login-31aff1275558496ea237cd1ed7dc6c66.png)
+![login.webp](https://www.ufec.cn/upload/2020/05/login-31aff1275558496ea237cd1ed7dc6c66.webp)
 同样老问题，在服务器上模拟登陆，会遇到验证码，Python 可以直接保存二维码等待用户输入，但在服务器上这样不现实，可以直接调用图片识别接口来操作即可。

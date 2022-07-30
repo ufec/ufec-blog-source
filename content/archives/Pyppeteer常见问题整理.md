@@ -3,7 +3,7 @@ title: Pyppeteer常见问题整理
 date: 2020-05-09 15:27:18.0
 updated: 2020-05-11 14:36:24.0
 url: https://www.ufec.cn/archives/pyppeteererrors.html
-thumbnail: https://my-static.ufec.cn/blog/2020/04/timg-97d283f09f9f4ddc896ea6ea715b2380.webp
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/2020/04/timg-97d283f09f9f4ddc896ea6ea715b2380.webp
 categories:
   - Bug
 tags:

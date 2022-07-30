@@ -3,7 +3,7 @@ title: AndroidStudio反编译调试实战
 date: 2020-10-28 21:03:45.0
 updated: 2020-10-28 21:03:46.0
 url: https://www.ufec.cn/archives/androidstudiodebug.html
-thumbnail: https://my-static.ufec.cn/blog/55d8c8954ec2cbec65d4e25a5da63395.png
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/55d8c8954ec2cbec65d4e25a5da63395.webp
 categories:
   - 调试
 tags:
@@ -53,7 +53,7 @@ jarsigner -verbose -keystore mykey.keystore -signedjar 重新签名后的.apk �
 
 `<depends>com.intellij.modules.java</depends>`
 
-![insert_code](https://my-static.ufec.cn/blog/6655f08f35a720d382861a1fdc80ad24.png)
+![insert_code](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/6655f08f35a720d382861a1fdc80ad24.webp)
 
 `AndroidStudio 4.1`就能正确加载插件
 
@@ -61,15 +61,15 @@ jarsigner -verbose -keystore mykey.keystore -signedjar 重新签名后的.apk �
 
 按住 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> 选择->`编辑器`->`文件类型`，找到黑色图标那个`Smali`，点击注册格式的加号，输入`*.smali`，并删除掉橙色图标的`Smali`支持
 
-![smalidea_activte](https://my-static.ufec.cn/blog/8657e6ea8dce1d70c696bae5cb488803.png)
+![smalidea_activte](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/8657e6ea8dce1d70c696bae5cb488803.webp)
 
-![samli_unactive](https://my-static.ufec.cn/blog/5c763c1fecf71c937b70a8597a74fa90.png)
+![samli_unactive](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/5c763c1fecf71c937b70a8597a74fa90.webp)
 
 这样就完成了准备工作
 
 通过`apktool`解包后的目录用`AndroidStudio`打开，右键`smali`目录，选择`标记目录为`->`源目录(Source Root)`，查看`AndroidManifest.xml`文件中`application`根元素是否有`android:debuggable="true"`这个属性，一般是没有的，添加上此行代码，并在程序主`Activity`中(搜索`LAUNCHER`，有此属性值的`activity`便是主`Activity`)添加`invoke-static{}, Landroid/os/Debug;->waitForDebugger()V`此行代码
 
-![watefor_debug](https://my-static.ufec.cn/blog/d0734423c57257244bcdb0ec34d2abd9.png)
+![watefor_debug](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/d0734423c57257244bcdb0ec34d2abd9.webp)
 
 然后对修改后的文件目录进行打包、签名（小技巧，建议修改包名可以使调试版的正式版共存）
 
@@ -102,13 +102,13 @@ adb forward tcp:端口号 jdwp:进程号
 
 至此即为捕获到的认证流程，如下图所示(其中`IP`可能不同的地域服务器不同，连上沃派后会弹出引导界面，引导界面的地址即为服务器地址)
 
-![auth_process](https://my-static.ufec.cn/blog/f3c58346b4d751c32c2a98ded79f21e8.jpg)
+![auth_process](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/f3c58346b4d751c32c2a98ded79f21e8.webp)
 
 根据调试过程来看，请求头`X-Xinli-Auth`中`response`字段是由前一个接口返回数据中的`challenge`加密而来，`signature`是由返回数据及部分特征值组合而来(`请求方式`、`请求地址`、`请求头部分字段`)拼接，再进行加密而来，加密方法为`HmacSHA1`，密钥为`s3cr3t`，附上`Java`和`PHP`实现代码
 
-![java_netkeeper_code](https://my-static.ufec.cn/blog/799eb1ec25f58ac5aca0396f181f3a81.png)
+![java_netkeeper_code](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/799eb1ec25f58ac5aca0396f181f3a81.webp)
 
-![php_netkeeper_code](https://my-static.ufec.cn/blog/39bd35c6a4932f8098066922a66ea8a8.png)
+![php_netkeeper_code](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/39bd35c6a4932f8098066922a66ea8a8.webp)
 
 加密算法也很简单，没有自己实现，用的现有的加密库，但他有个判断，我试了几次都是断进同一个点，就直接扒出来了，不知道另一个点是否对结果有影响
 

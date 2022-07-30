@@ -3,7 +3,7 @@ title: 飞Young逆向分析-第三章
 date: 2021-10-10 14:16:07.0
 updated: 2021-10-10 14:16:07.0
 url: https://www.ufec.cn/archives/fyoung-reverse-third-part.html
-thumbnail: https://my-static.ufec.cn/blog/5cbc7afdc3fd99feefbb44e3734fcccc.png
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/5cbc7afdc3fd99feefbb44e3734fcccc.webp
 categories:
   - 代码
   - 日常
@@ -38,7 +38,7 @@ System.out.println(a ^ xorRes); // 20
 
 也就是说，我们已知异或结果，和另一个值即可还原原来两个相异或的值，于是乎我们不难写出解密函数`decode_param`
 
-![fyoung_decode_param](https://my-static.ufec.cn/blog/bb94178f82e971bfc06b114f98288f5d.png)
+![fyoung_decode_param](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/bb94178f82e971bfc06b114f98288f5d.webp)
 
 鉴于此，我写了一个`node`服务，用于解密参数，以及生成密码，无需繁琐抓包（只需要传入密码即可，无需担心账号密码泄露）
 
@@ -56,7 +56,7 @@ System.out.println(a ^ xorRes); // 20
 
 这个地方目前没用 js 还原出来，这里也是先用 Java 简单的写了一个日志解析，待 js 还原出来，一并上线到校园网服务
 
-![fyoung_decode_android_log](https://my-static.ufec.cn/blog/999b66cbe5f6629390975c1e0a2b1b29.png)
+![fyoung_decode_android_log](https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/999b66cbe5f6629390975c1e0a2b1b29.webp)
 
 从日志我们可以看到更多的东西，日志打的挺多的，每个步骤干了啥，基本都有
 
