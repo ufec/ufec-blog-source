@@ -79,14 +79,15 @@ const Footer = () => {
         <div className="site-info flex flex-col justify-center">
           <p className="self-center">
             <a
-              href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral"
-              target="blank"
-              title="又拍云"
+              href="https://www.lingshulian.com"
+              target="_blank"
+              title="棱束链"
             >
               <img
-                src="https://my-static.ufec.cn/blog/2020/04/youpai-1b2eb4eb7b744730a41057a221ef5499.webp"
-                alt="又拍云"
-                width="48"
+                src="//wj.gtimg.com/uploadImages/2021-06-21/2021062117555260d06228d7fe3.png"
+                alt="棱束链"
+                width={300}
+                referrerPolicy="no-referrer"
               />
             </a>
           </p>
