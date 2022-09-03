@@ -3,7 +3,7 @@ title: Fyoung密码算法
 date: 2022-09-03 10:17:40.0
 updated: 2022-09-03 10:17:40.0
 slug: fyoung-password-algorithm
-thumbnail:
+thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/8885de4772b45721003402ea5aca50f2.webp
 categories:
   - 代码
 tags:
