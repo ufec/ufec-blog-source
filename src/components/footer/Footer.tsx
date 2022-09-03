@@ -77,7 +77,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="site-info flex flex-col justify-center">
-          <p className="self-center">
+          {/* <p className="self-center">
             <a
               href="https://www.lingshulian.com"
               target="_blank"
@@ -90,7 +90,7 @@ const Footer = () => {
                 referrerPolicy="no-referrer"
               />
             </a>
-          </p>
+          </p> */}
           <div className="badges">
             <div className="github-badge">
               <a
