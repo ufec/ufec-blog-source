@@ -1,7 +1,7 @@
 ---
 title: Fyoung密码算法
 date: 2022-09-03 10:17:40.0
-updated: 2022-09-03 10:17:40.0
+updated: 2022-09-03 17:38:40.0
 slug: fyoung-password-algorithm
 thumbnail: https://ghproxy.com/https://raw.githubusercontent.com/ufec/picGoImg/main/blog/8885de4772b45721003402ea5aca50f2.webp
 categories:
@@ -269,3 +269,7 @@ console.log(MyEncrypt.encryptPassword(daykey, "你的Fyoung密码"));
 ## 结语
 
 可能 `java` 版本的代码大家都有，就不发了，没什么意思。这里只是分享一下 `js` 版本的，`go` 语言版本不太好放出来(因为那已经是一个完整的项目了，不管会不会都可以非常方便的打包出可执行文件)，后续会单独抽出沃派`WeNet`的加密算法，至于认证我就不发了，还是得要留一些门槛的。
+
+新版 `Fyoung` 已经来临，不论是何种校园网，有压迫就有斗争，绝不能屈服，我们需要一个良心的网络环境
+
+后浪们，加油！
